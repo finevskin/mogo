@@ -237,7 +237,7 @@ h6 {
 .section.section--devices {
   margin-bottom: 40px;
   padding-bottom: 0;
-  background: url(/img/background1.jpg) no-repeat center/cover;
+  background: url(../../img/background1.jpg) no-repeat center/cover;
 }
 
 .section.section--feedback {
