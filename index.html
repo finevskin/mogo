@@ -48,16 +48,12 @@
               href="http://risovach.ru/upload/2012/10/comics_nu-pochemu_orig_1350492557.jpg"
               >Contact</a
             >
-            <a
-              target="_blank"
-              href="http://risovach.ru/upload/2012/10/comics_nu-pochemu_orig_1350492557.jpg"
-              ><i class="fa-solid fa-cart-shopping"></i
-            ></a>
-            <a?
-              target="_blank"
-              href="http://risovach.ru/upload/2012/10/comics_nu-pochemu_orig_1350492557.jpg"
-              ><i class="fa-solid fa-magnifying-glass"></i
-            ></a>
+            <a class="nav__link" href="#">
+              <i class="fas fa-shopping-cart"></i>
+            </a>
+            <a class="nav__link" href="#">
+              <i class="fas fa-search"></i>
+            </a>
           </nav>
         </div>
       </div>
@@ -81,10 +77,18 @@
       <div class="slider">
         <div class="container">
           <div class="slider__inner">
-            <div class="slider__item"><b>01</b> Intro</div>
-            <div class="slider__item"><b>02</b> Work</div>
-            <div class="slider__item"><b>03</b> About</div>
-            <div class="slider__item"><b>04</b> Contacts</div>
+            <div class="slider__item">
+              <b>01</b> <span class="slider__text">Intro</span>
+            </div>
+            <div class="slider__item">
+              <b>02</b><span class="slider__text">Work</span>
+            </div>
+            <div class="slider__item">
+              <b>03</b> <span class="slider__text">About</span>
+            </div>
+            <div class="slider__item">
+              <b>04</b> <span class="slider__text">Contacts</span>
+            </div>
           </div>
         </div>
         <!-- container -->
@@ -168,7 +172,7 @@
           <h2 class="section__tittle">Amazing Services</h2>
         </div>
         <div class="services">
-          <div class="services__item">
+          <div class="services__item services__item--border">
             <img class="services__icon" src="./img/services1.png" alt="" />
             <div class="services__tittle">Photography</div>
             <div class="services__text">
@@ -176,7 +180,7 @@
               eiusmod tempor.
             </div>
           </div>
-          <div class="services__item">
+          <div class="services__item services__item--border">
             <img class="services__icon" src="./img/design.png" alt="" />
             <div class="services__tittle">web design</div>
             <div class="services__text">
@@ -184,7 +188,7 @@
               eiusmod tempor.
             </div>
           </div>
-          <div class="services__item">
+          <div class="services__item services__item--border">
             <img class="services__icon" src="./img/Creativity.png" alt="" />
             <div class="services__tittle">Creativity</div>
             <div class="services__text">
@@ -192,9 +196,6 @@
               tempor.
             </div>
           </div>
-        </div>
-        <hr />
-        <div class="services">
           <div class="services__item">
             <img class="services__icon" src="./img/seo.png" alt="" />
             <div class="services__tittle">Seo</div>
@@ -250,7 +251,7 @@
         </div>
         <div class="wedo">
           <div class="wedo__item">
-            <img src="/img/wedo.png" alt="" />
+            <img class="wedo__image" src="/img/wedo.png" alt="" />
           </div>
           <div class="wedo__item">
             <div class="accordion">
@@ -327,7 +328,7 @@
           <a class="reviews__btn reviews__btn--prev" href="#">Prev</a>
           <a class="reviews__btn reviews__btn--next" href="#">Next</a>
           <div class="reviews__item">
-            <img class="reviews__photo" src="/img/reviews.jpg" alt="" />
+            <img class="reviews__photo" src="/img/img__reviews.jpg" alt="" />
             <div class="reviews__text">
               “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -493,7 +494,7 @@
       <div class="container">
         <div class="logos">
           <div class="logos__item">
-            <img src="/img/logos.png" alt="" />
+            <img class="logos__image" src="/img/logos.png" alt="" />
           </div>
         </div>
       </div>
@@ -904,7 +905,7 @@
               </a>
             </div>
           </div>
-        </div> 
+        </div>
         <!-- footer__inner -->
         <div class="copyright">© 2022 Maxim Finevskin</div>
       </div>

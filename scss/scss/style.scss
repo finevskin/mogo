@@ -34,8 +34,10 @@ h6 {
 
 // Container
 .container {
-  max-width: 1200px;
+  width: 100%;
+  max-width: 1230px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 // Header
@@ -45,11 +47,9 @@ h6 {
   padding-top: 30px;
   position: absolute;
   top: 0;
-  left: 0;
   right: 0;
-  bottom: 0;
   z-index: 0;
-  .header__logo {
+  &__logo {
     font-size: 30px;
     line-height: 1.2;
     font-weight: 700;
@@ -94,7 +94,7 @@ h6 {
     opacity: 1;
     background-color: #fce38a;
   }
-  .header__inner {
+  &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -107,29 +107,29 @@ h6 {
   justify-content: center;
   width: 100%;
   height: 100vh;
-  background: url(/img/picture_5.jpg) no-repeat center / cover;
-  .intro__tittle {
+  background: url(img/picture_5.jpg) no-repeat center / cover;
+  &__tittle {
     font-size: 150px;
     color: #fff;
     font-weight: 700;
     text-transform: uppercase;
-    line-height: 140px;
+    line-height: 1;
+    &:after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background-color: #fff;
+      margin: 60px auto 50px;
+    }
   }
-  .intro__tittle:after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 3px;
-    background-color: #fff;
-    margin: 60px auto 50px;
-  }
-  .intro__suptittle {
+  &__suptittle {
     margin-bottom: 20px;
     font-family: "Kaushan Script", cursive;
     font-size: 72px;
     color: #fff;
   }
-  .intro__inner {
+  &__inner {
     width: 100%;
     max-width: 880px;
     margin: 0 auto;
@@ -142,13 +142,11 @@ h6 {
   display: inline-block;
   vertical-align: top;
   padding: 8px 30px;
-
-  border: 3px solid #ffffff;
-
+  border: 3px solid #fff;
+  font-size: 14px;
+  font-weight: 700;
   color: #fff;
   text-transform: uppercase;
-  font-weight: bold;
-  font-size: 14px;
   text-decoration: none;
   transition: background 0.1s linear, color 0.1s linear;
 
@@ -165,12 +163,12 @@ h6 {
   bottom: 0;
   left: 0;
   z-index: 1;
-  .slider__inner {
-    width: 1200px;
+  &__inner {
+    max-width: 1200px;
     display: flex;
     justify-content: space-between;
   }
-  .slider__item {
+  &__item {
     padding: 20px 0;
     border-top: 3px solid #fff;
     width: 23%;
@@ -218,19 +216,19 @@ h6 {
     background: url(/img/bg_map.png) no-repeat center / cover;
     padding: 100px 0 80px;
   }
-  .section__header {
+  &__header {
     width: 100%;
     max-width: 950px;
     margin: 0 auto 50px;
     text-align: center;
   }
-  .section__suptittle {
+  &__suptittle {
     font-size: 24px;
     font-family: "Kaushan Script", cursive;
     line-height: 1.2;
     color: #333;
   }
-  .section__tittle {
+  &__tittle {
     font-size: 30px;
     line-height: 1.2;
     font-weight: bold;
@@ -242,12 +240,12 @@ h6 {
       display: block;
       width: 60px;
       height: 3px;
-      margin: 40px auto 40px;
+      margin: 40px auto;
       background-color: #f38181;
     }
   }
 
-  .section__text {
+  &__text {
     font-family: "Roboto", sans-serif;
     color: #999999;
     font-size: 15px;
@@ -257,11 +255,13 @@ h6 {
 
 // card
 .card {
-  margin-top: 100px;
+  margin: 80px -15px 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  .card__item {
-    width: 380px;
+  &__item {
+    width: 33.33333%;
+    padding: 0 15px;
   }
   .card__item:hover .card__img {
     transform: translate3d(-10px, -10px, 0);
@@ -272,19 +272,22 @@ h6 {
   .card__item:hover .card__text {
     opacity: 1;
   }
-  .card__img {
+
+  &__img {
     background: linear-gradient(to bottom, #f38181, #fce38a);
     transition: transform 0.2 s linear;
     img {
+      height: auto;
+      max-width: 100%;
       display: block;
       transition: opacity 0.1s linear;
     }
   }
-  .card__inner {
+  &__inner {
     position: relative;
     background-color: #95e1d3;
   }
-  .card__text {
+  &__text {
     width: 100%;
 
     color: #fff;
@@ -311,7 +314,6 @@ h6 {
   }
   &__name {
     font-size: 14px;
-    line-height: 1.2;
     font-weight: 600;
     text-transform: uppercase;
     color: #333333;
@@ -328,26 +330,28 @@ h6 {
 // statistics
 .statistics {
   background-color: #95e1d3;
-  .stat {
-    display: flex;
-  }
-  .stat__item {
+}
+//stat
+.stat {
+  display: flex;
+  flex-wrap: wrap;
+  &__item {
     padding: 70px 25px;
     flex: 1 1 0;
     border-left: 1px solid #b6ebe1;
     text-align: center;
     color: #fff;
+    &:last-child {
+      border-right: 1px solid #b6ebe1;
+    }
   }
-  .start__item:last-child {
-    border-right: 1px solid #b6ebe1;
-  }
-  .stat__count {
+  &__count {
     font-size: 72px;
     font-weight: 700;
     text-transform: uppercase;
     line-height: 1.2;
   }
-  .stat__text {
+  &__text {
     font-size: 14px;
     text-transform: uppercase;
   }
@@ -355,11 +359,15 @@ h6 {
 // services
 .services {
   display: flex;
+  flex-wrap: wrap;
+  &__item--border {
+    border-bottom: 1px solid #e5e5e5;
+  }
   &__item {
-    flex: 1 1 0;
-    padding-left: 85px;
-    padding-right: 35px;
+    width: 33.33333%;
+    padding: 0 35px 40px 85px;
     position: relative;
+    margin-bottom: 40px;
   }
   &__icon {
     position: absolute;
@@ -390,9 +398,10 @@ h6 {
   position: relative;
   &__item {
     display: block;
+    max-width: 100%;
+    height: auto;
   }
   &__iphone {
-    display: block;
     position: absolute;
     bottom: -80px;
     right: 0px;
@@ -403,8 +412,16 @@ h6 {
 // wedo
 .wedo {
   display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+  &__image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
   &__item {
     width: 50%;
+    padding: 0 15px;
   }
 }
 // accordion
@@ -480,6 +497,7 @@ h6 {
     position: relative;
   }
   &__photo {
+    display: block;
     padding: 43px;
     border: 3px solid #95e1d3;
     position: absolute;
@@ -907,8 +925,6 @@ h6 {
     display: flex;
     align-items: center;
   }
-  &__image {
-  }
   &__content {
     padding-left: 20px;
   }
@@ -946,6 +962,14 @@ h6 {
   }
 }
 
+// logos
+.logos {
+  display: flex;
+  &__image {
+    max-width: 100%;
+  }
+}
+
 // copyright
 .copyright {
   padding: 20px 0;
@@ -954,4 +978,188 @@ h6 {
   font-size: 14px;
   color: #333;
   font-weight: 600;
+}
+
+@media (max-width: 1230px) {
+  .intro__suptittle {
+    font-size: 52px;
+  }
+  .intro__tittle {
+    font-size: 120px;
+  }
+  // reviews
+  .reviews {
+    &__text {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 990px) {
+  .intro__suptittle {
+    font-size: 32px;
+  }
+  .intro__tittle {
+    font-size: 80px;
+  }
+  // stat
+  .stat {
+    justify-content: center;
+  }
+  .stat__item {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    flex: none;
+    width: 33.3333%;
+    border: none;
+    &:last-child {
+      border: 0;
+    }
+  }
+  // services
+  .services__item {
+    width: 50%;
+    padding-bottom: 0;
+  }
+  .services__item--border {
+    border-bottom: 0;
+  }
+  // reviews
+  .reviews {
+    padding: 0 60px;
+    &__photo {
+      padding: 13px;
+      width: 100px;
+      height: 100px;
+    }
+    &__item {
+      padding-left: 125px;
+    }
+  }
+}
+@media (max-width: 770px) {
+  .nav {
+    display: none;
+  }
+  .section {
+    padding: 40px 0;
+  }
+
+  // reviews
+  .reviews {
+    &__photo {
+      margin: 0 auto;
+      position: static;
+      margin-bottom: 20px;
+    }
+    &__item {
+      padding-left: 0;
+    }
+    &__text {
+      font-size: 16px;
+    }
+    &__author {
+      font-size: 20px;
+    }
+  }
+  // card
+  .card {
+    margin-top: 50px;
+    justify-content: center;
+  }
+  .card__item {
+    width: 100%;
+    max-width: 410px;
+    margin-bottom: 30px;
+    &:last-child {
+      margin: 0;
+    }
+  }
+  .slider__text {
+    display: none;
+  }
+  .slider__item:nth-child(1)::before {
+    width: 50%;
+  }
+  // services
+  .services {
+    justify-content: center;
+  }
+  .services__item {
+    width: 100%;
+    max-width: 400px;
+    padding-left: 55px;
+    padding-right: 0;
+  }
+  .services__icon {
+    left: 0;
+  }
+  // wedo
+  .wedo {
+    &__image {
+      display: none;
+    }
+    &__item {
+      width: 100%;
+    }
+  }
+  // column
+  .works {
+    flex-wrap: wrap;
+    &__columm {
+      flex: none;
+      width: 50%;
+    }
+  }
+}
+@media (max-width: 575px) {
+  .intro__suptittle {
+    font-size: 22px;
+  }
+  .intro__tittle {
+    font-size: 40px;
+  }
+  .section__header {
+    margin-bottom: 50px;
+  }
+  .section__tittle {
+    font-size: 24px;
+  }
+  .section__suptittle {
+    font-size: 20px;
+  }
+  .section__tittle::after {
+    margin: 20px auto;
+  }
+  // stat
+  .stat__item {
+    width: 100%;
+    border-bottom: 1px solid #b6ebe1;
+    &:last-child {
+      border: 0;
+    }
+  }
+  .stat__count {
+    font-size: 52px;
+  }
+  // devices
+  .devices {
+    max-width: 320px;
+    &__iphone {
+      width: 180px;
+      bottom: -50px;
+      right: -80px;
+    }
+  }
+  // reviews
+  .reviews {
+    padding: 0;
+    &__btn {
+      top: 18%;
+    }
+  }
+  // column
+  .works__columm {
+    width: 100%;
+  }
 }
